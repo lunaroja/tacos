@@ -2,24 +2,22 @@
 
 
 var tacoListItem = function(id, name, pictureUrl, cuisine, rating) {
-return `
-<div class="col-sm-6">
-  <div class="card mb-4 box-shadow">
-    <img class="card-img-top" src="${pictureUrl}">
-    <div class="card-body">
-      <h2>${name}</h2>
-      <p class="card-text">${cuisine}</p>
-      <div class="d-flex justify-content-between align-items-center">
-        <div class="btn-group">
-          <a href="taqueria.html?id=${id}" class="btn btn-sm btn-outline-secondary">View details</a>
-          <button type="button" class="btn btn-sm btn-outline-secondary">Add to favorites</button>
+  return `<div class="col-sm-6">
+    <div class="card mb-4 box-shadow">
+      <img class="card-img-top" src="${pictureUrl}">
+      <div class="card-body">
+        <h2>${name}</h2>
+        <p class="card-text">${cuisine}</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <div class="btn-group">
+            <a href="taqueria.html?id=${id}" class="btn btn-sm btn-outline-secondary">View details</a>
+            <button type="button" class="btn btn-sm btn-outline-secondary">Add to favorites</button>
+          </div>
+          <small class="text-muted">${rating}</small>
         </div>
-        <small class="text-muted">${rating}</small>
       </div>
     </div>
-  </div>
-</div>
-`;
+  </div>`;
 }
 
 $.getJSON( "https://api.airtable.com/v0/appSrgke7E0ElZhMY/Restaurants?api_key=key2m8VgwGT2iztad", function( data ) {
