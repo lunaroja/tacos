@@ -4,9 +4,9 @@
 var tacoListItem = function(id, name, pictureUrl, cuisine, rating) {
   return `<div class="col-sm-6">
     <div class="card mb-4 box-shadow">
-      <img class="card-img-top" src="${pictureUrl}">
+      <a href="taqueria.html?id=${id}"><img class="card-img-top" src="${pictureUrl}"></a>
       <div class="card-body">
-        <h2>${name}</h2>
+        <h2><a href="taqueria.html?id=${id}">${name}</a></h2>
         <p class="card-text">${cuisine}</p>
         <div class="d-flex justify-content-between align-items-center">
           <div class="btn-group">
