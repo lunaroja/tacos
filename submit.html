@@ -8,20 +8,33 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="all-view">
+<body class="detail-view">
 
   <section class="jumbotron text-center">
     <div class="container">
-      <h1 class="jumbotron-heading">Best Taquerias in SF</h1>
-      <p class="lead text-muted"> yummy</p>
-      <p>
-        <a href="submit.html" class="btn btn-primary my-2">Submit a taqueria</a>
-        <a href="#" class="btn btn-secondary my-2">See favorites</a>
-      </p>
+      <h1 class="jumbotron-heading">Submit your favorite Tacos Spot!</h1>
     </div>
   </section>
 
-  <div class="container taqueria-list">
+  <div class="container">
+
+    <form class="new-location">
+      <label for="Name">Name</label>
+      <input name="Name" type="text"><br>
+
+      <label for="Address">Address</label>
+      <input name="Address" type="text"><br>
+
+      <label for="District">District</label>
+      <textarea name="District"></textarea><br>
+
+
+      <label for="Picture">Picture</label>
+      <input name="Pictures" type="file"/><br>
+
+      <button class="submit">Add new Location</button>
+
+    </form>
 
   </div>
 
@@ -29,6 +42,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
-<script src="scripts.js"></script>
+<script src="submit.js"></script>
 </body>
 </html>
