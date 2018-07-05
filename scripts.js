@@ -20,7 +20,7 @@ var tacoListItem = function(id, name, pictureUrl, cuisine, rating) {
   </div>`;
 }
 
-$.getJSON( "https://api.airtable.com/v0/appSrgke7E0ElZhMY/Restaurants?api_key=key2m8VgwGT2iztad", function( data ) {
+$.getJSON( "https://api.airtable.com/v0/appSrgke7E0ElZhMY/Locations?api_key=key2m8VgwGT2iztad", function( data ) {
   // console.log(data.records);
   var items = [];
   items.push(`<div class="row">`);
