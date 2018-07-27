@@ -15,9 +15,9 @@ var api_key = 'key2m8VgwGT2iztad';
 var listView = function(id, name, pictureUrl, neighborhood, rating) {
   return `<div class="col-sm-3">
     <div class="card mb-4 box-shadow">
-      <a href="/?id=${id}"><img class="card-img-top" src="${pictureUrl}"></a>
+      <a href="?id=${id}"><img class="card-img-top" src="${pictureUrl}"></a>
       <div class="card-body">
-        <h2><a href="/?id=${id}">${name}</a></h2>
+        <h2><a href="?id=${id}">${name}</a></h2>
         <div class="d-flex justify-content-between align-items-center">
           <small class="text-muted">${rating}</small>
         </div>
