@@ -20,7 +20,7 @@ $.getJSON( airtable_list_url, function( data ) {
     // console.log(val.fields)
     var name = val.fields['Name'];
     var address = val.fields['Address'];
-    var picture = val.fields['Pictures'][0] ? val.fields['Pictures'][0].url : null;
+    var picture = val.fields['Pictures'] ? val.fields['Pictures'][0].url : null;
     var html = cardTemplate(name, address, picture);
     items.push(html);
   });
