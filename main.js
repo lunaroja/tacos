@@ -1,23 +1,10 @@
-// Helper for getting the `?ID=` part form the URL
-var getParameterByName = function(name, url) {
-  if (!url) url = window.location.href;
-  name = name.replace(/[\[\]]/g, "\\$&");
-  var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"), results = regex.exec(url);
-  if (!results) return null;
-  if (!results[2]) return '';
-  return decodeURIComponent(results[2].replace(/\+/g, " "));
-}
-
-// Airtable API Key, unique per user
-var api_key = 'key2m8VgwGT2iztad';
-
 // Template that generates the HTML for one item in our list view, given the parameters passed in
 var listView = function(id, name, pictureUrl, neighborhood, rating) {
   return `<div class="col-sm-3">
     <div class="card mb-4 box-shadow">
-      <a href="?id=${id}"><img class="card-img-top" src="${pictureUrl}"></a>
+      <a href="index.html?id=${id}"><img class="card-img-top" src="${pictureUrl}"></a>
       <div class="card-body">
-        <h2><a href="?id=${id}">${name}</a></h2>
+        <h4><a href="index.html?id=${id}">${name}</a></h4>
         <div class="d-flex justify-content-between align-items-center">
           <small class="text-muted">${rating}</small>
         </div>

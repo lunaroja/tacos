@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Submit your Favorite Taqueria in San Francisco</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+  <section class="jumbotron text-center">
+    <div class="container">
+      <h1 class="jumbotron-heading"><a href="index.html">What is your favorite Taqueria?</a></h1>
+    </div>
+  </section>
+
+  <div class="container submit-view">
+      <form id="submit-location">
+          <div class="form-group">
+            <label for="Name">Name</label>
+            <input required type="text" class="form-control" id="Name">
+          </div>
+          <div class="form-group">
+            <label for="Address">Address</label>
+            <input required type="text" class="form-control" id="Address">
+          </div>
+          <div class="form-group">
+            <label for="Website">Website</label>
+            <input required type="url" class="form-control" id="Website">
+          </div>
+          <div class="form-group">
+            <label for="Picture">Picture URL</label>
+            <input required type="url" class="form-control" id="Picture">
+          </div>
+          <div class="form-group">
+            <label for="About">About</label>
+            <textarea class="form-control" id="About" rows="3"></textarea>
+          </div>
+          <div class="form-group">
+            <label for="Neighborhood">Neighborhood</label>
+            <select class="form-control" id="Neighborhood">
+              <option>Mission District</option>
+              <option>Excelsior District</option>
+              <option>Financial District</option>
+              <option>SoMA District</option>
+              <option>Suny Side District</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Rating">Rating</label>
+            <select class="form-control" id="Rating">
+              <option>⭐️ Good</option>
+              <option>⭐️⭐️ Great</option>
+              <option>⭐️⭐️⭐️ Amazing!</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="Cost">Cost</label>
+            <select class="form-control" id="Cost">
+              <option>$</option>
+              <option>$$</option>
+              <option>$$$</option>
+            </select>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <script src="helpers.js"></script>
+  <script src="submit.js"></script>
+</body>
+</html>
