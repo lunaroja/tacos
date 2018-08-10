@@ -21,14 +21,15 @@ var getDataForList = function() {
     var html = [];
     html.push(`<div class="row">`);
     // 2. Iterates over every record and uses the list template
-    $.each( data.records, function( index, val ) {
-      // console.log(val.fields)
-      var id = val.id;
-      var fields = val.fields;
+    $.each( data.records, function( index, record ) {
+      // console.log(record)
+      var id = record.id;
+      var fields = record.fields;
       var name = fields["Name"];
       var pictureUrl = fields["Pictures"] ? fields["Pictures"][0].url : '';
       var neighborhood = fields["Neighborhood"];
       var rating = fields["Rating"];
+      // Pass all fields into the List Template
       var itemHTML = listView(id, name, pictureUrl, neighborhood, rating);
       html.push(itemHTML);
     });
@@ -67,23 +68,24 @@ var getDataForId = function(id) {
     // console.log(data);
     var html = [];
     html.push(`<div class="row">`);
-      // console.log(val)
-      var id = record.id;
-      var fields = record.fields;
-      var name = fields["Name"];
-
-      var pictureUrl = fields["Pictures"] ? fields["Pictures"][0].url : '';
-      var neighborhood = fields["Neighborhood"];
-      var rating = fields["Rating"];
-      var address = fields["Address"];
-      var cost = fields["Cost"];
-      var website = fields["Website"];
-      var delivery = fields["Delivery"];
-      var lat = fields["Latitude"];
-      var long = fields["Longitude"];
-
-      var itemHTML = detailView(id, name, pictureUrl, neighborhood, rating, address, cost, website, lat, long);
-      html.push(itemHTML);
+    // console.log(record)
+    var id = record.id;
+    var fields = record.fields;
+    
+    var name = fields["Name"];
+    var pictureUrl = fields["Pictures"] ? fields["Pictures"][0].url : '';
+    var neighborhood = fields["Neighborhood"];
+    var rating = fields["Rating"];
+    var address = fields["Address"];
+    var cost = fields["Cost"];
+    var website = fields["Website"];
+    var delivery = fields["Delivery"];
+    var lat = fields["Latitude"];
+    var long = fields["Longitude"];
+    
+    // Pass all fields into the Detail Template
+    var itemHTML = detailView(id, name, pictureUrl, neighborhood, rating, address, cost, website, lat, long);
+    html.push(itemHTML);
     html.push(`</div>`);
     $(".detail-view").append(html.join(""));
   });
