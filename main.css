@@ -1,0 +1,6 @@
+.star {
+  display: inline-block;
+  position: absolute;
+  top: .5em;
+  right: .5em;
+}
